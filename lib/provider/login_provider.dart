@@ -18,7 +18,6 @@ class LoginChangeNotifierProvider extends ChangeNotifier {
   LoginEntity? get login => _login;
   String? get error => _error;
   bool get isLoading => _isLoading;
-
   Future<void> loginFunction({
     required String phone_or_email,
     required String password,
@@ -56,6 +55,7 @@ class LoginChangeNotifierProvider extends ChangeNotifier {
     } catch (e) {
       print(_isLoading);
       _error = e.toString();
+      _login = null;
       print(_isLoading);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

@@ -15,7 +15,6 @@ class LoginProvider {
         {
           'phone_or_email': phone_or_email,
           'password': password,
-         
         },
       ),
     );
